@@ -14,15 +14,14 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-     <%!# render is used specifically for partials, so we don't have to use _nav #%>
+    <%!# render is used specifically for partials, so we don't have to use _nav #%>
     <%= render "shared/nav", location: 'top' %>
     
     <%= login_helper %>
     
     <%= yield %>
-    
-    <% if session[:source] %> <!--exists conditional-->
-    <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+
+
+    <%= source_helper("application") %>
   </body>
 </html>
