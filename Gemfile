@@ -57,6 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise', '~> 4.3'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-gem 'r_martinez_view_tool', git: 'https://github.com/rachelmartinez1/RMartinezViewTool'
-
+gem 'r_martinez_view_tool', '~> 0.1.0'
 
