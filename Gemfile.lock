@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/rachelmartinez1/RMartinezViewTool
+  revision: 5bd3b5930db88a8bc60c19901d886be2e694c159
+  specs:
+    r_martinez_view_tool (0.1.0)
+
+GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
   specs:
@@ -201,6 +207,7 @@ DEPENDENCIES
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.0)
+  r_martinez_view_tool!
   rails (~> 5.0.3)
   sass-rails (~> 5.0)
   spring
