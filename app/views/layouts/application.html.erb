@@ -24,11 +24,10 @@
           <%!# render is used specifically for partials, so we don't have to use _nav #%>
           <%= render "shared/application_nav" %>
           
-          <%= login_helper %>
           
           <%= yield %>
           
-          <%= copyright_generator %>
+          <%= render "shared/application_footer" %>
 
           <%= source_helper("application") %>
           
