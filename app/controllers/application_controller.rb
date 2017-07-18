@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
   include DefaultPageContent
+
+  before_action :set_copyright
+
+def set_copyright
+  @copyright = RMartinezViewTool::Renderer.copyright 'Rachel Martinez', 'All rights reserved'
+  end
 end
