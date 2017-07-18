@@ -56,4 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gemfile
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise', '~> 4.3'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'r_martinez_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.7', '>= 1.7.5'
