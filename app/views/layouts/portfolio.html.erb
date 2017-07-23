@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <!--start of masthead-->
+    <!--start of navigation-->
     <div class="collapse bg-inverse" id="navbarHeader">
       <div class="container">
         <div class="row">
@@ -32,6 +32,7 @@
         </div>
       </div>
     </div>
+    
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand">Album</a>
@@ -40,7 +41,9 @@
         </button>
       </div>
     </div>
-
+    <!--end of navigation-->
+    
+    <!--start of masthead-->
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Album example</h1>
@@ -58,7 +61,18 @@
     <%= login_helper %>
   
     <%= yield %>
-    
+
+    <!--start of footer -->
+  <footer class="text-muted">
+    <div class="container">
+  	<p class="float-right">
+  	  <a href="#">Back to top</a>
+  	</p>
+  	<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+  	<p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+    </div>
+  </footer>
+    <!--end of footer -->
 
     <%= source_helper("application") %>
   </body>
