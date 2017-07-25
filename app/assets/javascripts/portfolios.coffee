@@ -13,16 +13,16 @@ ready = ->
   $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
     updated_order = []
     set_positions()
-    $('.card').each (i) -> 
+    $('.card').each (i) ->
       updated_order.push
         id: $(this).data('id')
         position: i + 1
       return
-      $.ajax
-        type: 'PUT'
-        url: '/portfolios/sort'
-        data: order: updated_order
-      return
+    $.ajax
+      type: 'PUT'
+      url: '/portfolios/sort'
+      data: order: updated_order
+    return
   return
-  
+
 $(document).ready ready
