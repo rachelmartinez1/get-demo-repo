@@ -1,14 +1,9 @@
 <%= form_for(blog) do |f| %>
   <% if blog.errors.any? %>
-    <div id ="error_explaination">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being save: </h2>
-      <ul>
-        <% blog.errors.full_messsages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+    <% blog.errors.full_messages.each do |error| %>
+     <%= js add_gritter(error, title: "Rachel Martinez Portfolio", sticky: false) %>
   <% end %>  
+  <% end %>
 
   <div class="form_group">
     <%= f.text_field :title, class: 'form-control', Placeholder: 'Title' %>
