@@ -9,6 +9,7 @@ CarrierWave.configure do |config|
   }
 
   config.aws_credentials = {
-
+  
   }
+  
 end
