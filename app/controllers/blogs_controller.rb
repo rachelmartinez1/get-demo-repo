@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
       @page_title = @blog.title
       @seo_keywords = @blog.body
     else 
-      redirect_to blogs_path, notice: "You are not authorized to access this page"
+      redirect_to blogs_path, notice: 'You are not authorized to access this page'
     end
   end
   
@@ -92,6 +92,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :status)
     end
 end

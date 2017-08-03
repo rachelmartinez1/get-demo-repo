@@ -13,6 +13,7 @@ puts "10 blog posts created"
     percent: 15
     )
 end
+
 puts "5 skills created"
 
 9.times do |portfolio_item|
