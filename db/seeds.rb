@@ -1,3 +1,22 @@
+User.create!(
+  email: "test@test.com", 
+  password: "martinezra",
+  password_confirmation: "martinezra",
+  name: "Admin User",
+  roles: "site_admin"
+  )
+  
+  puts "1 Admin User Created"
+  
+  User.create!(
+  email: "test2@test.com", 
+  password: "martinezra",
+  password_confirmation: "martinezra",
+  name: "Regular User"
+  )
+  
+  puts "1 Reg User Created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
