@@ -71,9 +71,4 @@ module ApplicationHelper
     js add_gritter(msg, title: "Rachel Martinez Portfolio", sticky: false)
   end
 
-
-
-
-
-
 end
