@@ -20,7 +20,8 @@ puts "10 blog posts created"
     title: "Rails #{skill}",
     percent: 15
     )
-    
+end
+
 puts "5 skills created"
 
 8.times do |portfolio_item|
@@ -44,12 +45,3 @@ end
 end
 
 puts "9 portfolio items created"
-end
-
-3.times do |technology|
-  Portfolio.last.technologies.create!(
-    name: "Technology #{technology}"
-    )
-  end
-  
-  puts "3 technologies created"
