@@ -27,16 +27,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'pry-byebug'
 end
@@ -56,13 +48,21 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gemfile
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise', '~> 4.3'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
 gem 'r_martinez_view_tool', '~> 0.1.0'
-gem 'petergate', '~> 1.7'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'petergate', '~> 1.7', '>= 1.7.5'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.6'
-gem 'carrierwave-aws', '~> 1.0', '>= 1.0.2'
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave-aws', '~> 1.2'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
+gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.1'
+gem 'redis', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'

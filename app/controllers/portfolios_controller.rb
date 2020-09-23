@@ -1,18 +1,33 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout 'portfolio'
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
   
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
+  end
+  
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+    
+  render nothing: true
+  end
+  
+  def angular
+    @angular_portfolio_items = Portfolio.angular
   end
   
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
+
+    3.times{ @portfolio_item.technologies.build }
   end
   
   def create 
-     @portfolio_item = Portfolio.new(portfolio_params)
+     @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, 
+        technologies_attributes: [:name]))
      
      respond_to do |format|
        if @portfolio_item.save
@@ -56,7 +71,7 @@ class PortfoliosController < ApplicationController
                                       :body, 
                                       :main_image,
                                       :thumb_image,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:id, :name, :_destroy]
                                       )
   end
   
